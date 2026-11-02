@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reno Store 123 — Construction Detailed Schedule</title>
+<title>Springtown 123 — Construction Detailed Schedule</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -380,7 +380,7 @@
   <div class="titleblock">
     <div>
       <div class="eyebrow">Construction &middot; Detailed Schedule</div>
-      <h1>Reno Store 123</h1>
+      <h1>Springtown 123</h1>
       <div class="sub">Rebased from the McCoys Canyon Lake schedule — 118 activities across Design and Permitting, Procurement, Site, Sales Floor Building, Drive Thru, Inspections/CO, and Store Planning - Merchandising. Design and Permitting starts 8/17/2026, Order PEMB (90-day lead) drives Erect PEMB, Mobilize starts 2/1/2027. Store Set Up runs 6 weeks to absorb the Thanksgiving slowdown. Edit progress and dates below as the job proceeds.</div>
     </div>
     <div class="stat">
@@ -464,7 +464,7 @@
   </div>
 
   <div class="footer-note">
-    <span>Reno Store 123 &middot; Detailed Construction Schedule</span>
+    <span>Springtown 123 &middot; Detailed Construction Schedule</span>
     <span id="lastSaved">Not yet saved this session</span>
   </div>
 
@@ -473,15 +473,15 @@
   <div class="main-tab-panel" id="maintab-cashflow">
   <div class="cf-scope">
 
-    <div class="section-header"><h2>Combined Cash Flow Timeline</h2><div class="section-line"></div><div class="section-badge">Reno Store 123 vs. Canyon Lake</div></div>
-    <p class="lede">Both stores are modeled from their real construction schedules rather than synthetic curves. Reno Store 123 uses its 105 budgeted tasks (design, PEMB, GC, and McCoy's self-contracted scope, each spread across its actual task dates from the Schedule tab; Store Planning - Merchandising is excluded since it isn't part of the construction budget). Canyon Lake uses its own 99-task as-built schedule the same way. Shift either start date to see how the combined monthly outflow lines up between the two projects.</p>
+    <div class="section-header"><h2>Combined Cash Flow Timeline</h2><div class="section-line"></div><div class="section-badge">Springtown 123 vs. Canyon Lake</div></div>
+    <p class="lede">Both stores are modeled from their real construction schedules rather than synthetic curves. Springtown 123 uses its 105 budgeted tasks (design, PEMB, GC, and McCoy's self-contracted scope, each spread across its actual task dates from the Schedule tab; Store Planning - Merchandising is excluded since it isn't part of the construction budget). Canyon Lake uses its own 99-task as-built schedule the same way. Shift either start date to see how the combined monthly outflow lines up between the two projects.</p>
 
     <div class="panel">
       <div class="panel-header">Model Controls</div>
       <div class="panel-body">
         <div class="controls">
           <div class="ctrl">
-            <label>Reno Store 123 schedule start (shifts all 105 budgeted tasks)</label>
+            <label>Springtown 123 schedule start (shifts all 105 budgeted tasks)</label>
             <input type="month" id="cfAzleStart" value="2026-08">
           </div>
           <div class="ctrl">
@@ -529,16 +529,16 @@
       </div>
       <div class="stat">
         <div class="n" id="cfStatAzlePeak">–</div>
-        <div class="l">Reno Store 123 peak monthly burn (standalone)</div>
+        <div class="l">Springtown 123 peak monthly burn (standalone)</div>
       </div>
       <div class="stat good">
         <div class="n" id="cfStatFinish">–</div>
-        <div class="l">Reno Store 123 projected completion</div>
+        <div class="l">Springtown 123 projected completion</div>
       </div>
     </div>
 
     <div class="cf-footnote">
-      Methodology: monthly spend curves derived from paid-invoice history on Lockhart, Abilene, Lubbock, and New Caney (Design vs. Construction categorized per Work Order Category). Curves are normalized to percent-of-duration and blended equally across the four stores, then applied to Canyon Lake's budget. Reno Store 123 instead uses its real task-level schedule and per-bucket budgets. This is a planning model, not a contractual schedule — actual draws will vary with contract terms and change orders.
+      Methodology: monthly spend curves derived from paid-invoice history on Lockhart, Abilene, Lubbock, and New Caney (Design vs. Construction categorized per Work Order Category). Curves are normalized to percent-of-duration and blended equally across the four stores, then applied to Canyon Lake's budget. Springtown 123 instead uses its real task-level schedule and per-bucket budgets. This is a planning model, not a contractual schedule — actual draws will vary with contract terms and change orders.
     </div>
 
   </div>
@@ -558,7 +558,7 @@
      giving Store Planning enough lead time to clear both Thanksgiving and Christmas
      and merchandise the store for a 2027 opening. */
   const DEFAULT_DATA = [
-    {id:1, parent:null, name:'Reno Store 123', phase:'project', isParent:true, milestone:false, progress:0, start:null, end:null, resource:''},
+    {id:1, parent:null, name:'Springtown 123', phase:'project', isParent:true, milestone:false, progress:0, start:null, end:null, resource:''},
     {id:2, parent:1, name:'Design and Permitting', phase:'Design and Permitting', isParent:true, milestone:false, progress:0, start:null, end:null, resource:''},
     {id:3, parent:2, name:'Civil Design', phase:'Design and Permitting', isParent:false, milestone:false, progress:0, start:'2026-08-17', end:'2026-09-20', resource:'Eckermann Engineering'},
     {id:4, parent:2, name:'Architectural and MEP Design', phase:'Design and Permitting', isParent:false, milestone:false, progress:0, start:'2026-08-17', end:'2026-09-27', resource:'Studio 8'},
@@ -1129,7 +1129,7 @@
   function buildExportPayload(){
     return {
       exportedAt: new Date().toISOString(),
-      project: "Reno Store 123 — Detailed Construction Schedule",
+      project: "Springtown 123 — Detailed Construction Schedule",
       rows: rows.map(r=>({id:r.id,parent:r.parent,name:r.name,phase:r.phase,isParent:r.isParent,progress:r.progress,start:r.start,end:r.end,resource:r.resource}))
     };
   }
@@ -1144,7 +1144,7 @@
 
   document.getElementById("btnExport").addEventListener("click",()=>{
     const stamp = todayISO();
-    downloadJSON(buildExportPayload(), "reno-store-123-detailed-schedule-"+stamp+".json");
+    downloadJSON(buildExportPayload(), "springtown-123-detailed-schedule-"+stamp+".json");
     document.getElementById("lastSaved").textContent = "Saved just now ("+stamp+")";
   });
 
@@ -1194,6 +1194,11 @@
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(data => {
       if(!data || !Array.isArray(data.rows)) return Promise.reject();
+      // Ignore a stale progress file left over from another project (e.g. Canyon Lake)
+      if(!data.project || data.project.indexOf('Springtown 123')!==0){
+        document.getElementById("lastSaved").textContent = "Ignored schedule-progress.json (saved from a different project) -- showing Springtown 123 baseline";
+        return;
+      }
       rows = data.rows.map(r=>({...r}));
       nextId = Math.max(200, ...rows.map(r=>r.id+1));
       collapsed = {};
@@ -1232,7 +1237,7 @@
   }
   function fmtK(n){ return '$'+Math.round(n/1000).toLocaleString()+'K'; }
 
-  // Real detailed schedule for Reno Store 123 (105 budgeted tasks; Store Planning - Merchandising
+  // Real detailed schedule for Springtown 123 (105 budgeted tasks; Store Planning - Merchandising
   // excluded -- it isn't part of the construction budget). Dates match the Schedule tab as of the
   // latest revision (Order PEMB 90-day lead, Erect PEMB 4/26/27 for slab cure, Façade Structural
   // Steel removed).
@@ -1394,9 +1399,9 @@
   }
 
   // Real detailed schedule for Canyon Lake (99 budgeted tasks, from its original as-built schedule --
-  // the same source document Reno Store 123 was rebased from). Bucket tags (design/pemb/gc/mccoy)
+  // the same source document Springtown 123 was rebased from). Bucket tags (design/pemb/gc/mccoy)
   // assigned by matching each activity's name+phase against the same resource-based tagging used for
-  // the equivalent Reno Store 123 task. Façade Structural Steel (which Reno removed) is tagged 'pemb',
+  // the equivalent Springtown 123 task. Façade Structural Steel (which Springtown 123 removed) is tagged 'pemb',
   // matching its CT Darnel-resourced neighbors.
   const CANYON_SCHEDULE_TASKS = [
     {s:'2026-07-20',e:'2026-07-24',b:'mccoy'},
@@ -1614,10 +1619,10 @@
 
     const datasets = [];
     if(split){
-      datasets.push({ label:'Reno Store 123 — Design', data:azleAligned.designArr, backgroundColor:'#FCE38A', stack:'s' });
-      datasets.push({ label:'Reno Store 123 — PEMB', data:azleAligned.pembArr, backgroundColor:'#F5C300', stack:'s' });
-      datasets.push({ label:'Reno Store 123 — GC', data:azleAligned.gcArr, backgroundColor:'#3d8b5e', stack:'s' });
-      datasets.push({ label:'Reno Store 123 — McCoy\'s Scope', data:azleAligned.mccoyArr, backgroundColor:'#A66B32', stack:'s' });
+      datasets.push({ label:'Springtown 123 — Design', data:azleAligned.designArr, backgroundColor:'#FCE38A', stack:'s' });
+      datasets.push({ label:'Springtown 123 — PEMB', data:azleAligned.pembArr, backgroundColor:'#F5C300', stack:'s' });
+      datasets.push({ label:'Springtown 123 — GC', data:azleAligned.gcArr, backgroundColor:'#3d8b5e', stack:'s' });
+      datasets.push({ label:'Springtown 123 — McCoy\'s Scope', data:azleAligned.mccoyArr, backgroundColor:'#A66B32', stack:'s' });
       if(els.showCanyon.checked){
         datasets.push({ label:'Canyon Lake — Design', data:canyonAligned.designArr, backgroundColor:'#8fbf9f', stack:'s' });
         datasets.push({ label:'Canyon Lake — PEMB', data:canyonAligned.pembArr, backgroundColor:'#1B4D2E', stack:'s' });
@@ -1625,7 +1630,7 @@
         datasets.push({ label:'Canyon Lake — McCoy\'s Scope', data:canyonAligned.mccoyArr, backgroundColor:'#5b6058', stack:'s' });
       }
     } else {
-      datasets.push({ label:'Reno Store 123', data:azleArr, backgroundColor:'#F5C300', stack:'s' });
+      datasets.push({ label:'Springtown 123', data:azleArr, backgroundColor:'#F5C300', stack:'s' });
       if(els.showCanyon.checked){
         datasets.push({ label:'Canyon Lake', data:canyonArr, backgroundColor:'#1B4D2E', stack:'s' });
       }
